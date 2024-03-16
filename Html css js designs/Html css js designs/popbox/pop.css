@@ -1,0 +1,34 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+Rounded+1c&family=Poppins:wght@100;300&display=swap');
+
+  *
+  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif ;
+}
+section
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #e3f2fd;
+}
+button
+{
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    background: #4070f4;
+    border-radius: 6px;
+}
+button .show-modal
+{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile Setup</title>
+
+    <link rel="stylesheet" href="../bootstrap-5.2.3-dist/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <script src="../bootstrap-5.2.3-dist/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="usersetup.css" />
+  </head>
+
+  <body>
+    <form
+      class="needs-validation form-cntainer"
+      novalidate
+      onsubmit="return validateForm()"
+      action=""
+    >
+      <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+          <div class="col-md-2 border-right">
+            <!-- ======================== -->
+            <div class="contaiber mt-md-5 rounded-circle">
+              <div class="row justify-content-center">
+                <div class="profile-pic-wrapper">
+                  <div class="pic-holder">
+                    <!-- uploaded pic shown here -->
+                    <img
+                      id="profilePic"
+                      class="pic img-fluid rounded-circle"
+                      src="./img/userProfile.png"
+                    />
+                    <input
+                      class="uploadProfileInput"
+                      type="file"
+                      name="profile_pic"
+                      id="newProfilePhoto"
+                      accept="image/*"
+                      style="opacity: 0"
+                    />
+                    <label for="newProfilePhoto" class="upload-file-block">
+                      <div class="text-center">
+                        <div class="mb-2">
+                          <i class="fa fa-camera fa-2x"></i>
+                        </div>
+                        <div class="text-uppercase">
+                          Update <br />
+                          profile picture
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <span class="font-weight-bold text-uppercase"
+                    >mohan maali</span
+                  ><span class="text-black-50">mohan@gmail.com</span
+                  ><span> </span>
+                </div>
+              </div>
+            </div>
+            <!-- ====================== -->
+          </div>
+          <div class="col-md-10">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="p-3 py-md-5">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h3 class="text-right">
+                      <strong class="text-uppercase heading-text"
+                        >Profile Setup</strong
+                      >
+                    </h3>
+                  </div>
+
+                  <div class="row mt-2">
+                    <div class="col-md-6">
+                      <label class="company-name">Full Name</label>
+                      <input
+                        aria-describedby="textExample1"
+                        id="fname"
+                        type="text"
+                        class="form-control"
+                        placeholder=" full name"
+                        value=""
+                        name="fullname"
+                        required
+                        pattern="[A-Za-z]{3,}"
+                      />
+                      <div id="fullname-error" class="invalid-feedback error">
+                        invalid name.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="username">username</label>
+                      <input
+                        aria-describedby="textExample1"
+                        id="username"
+                        type="text"
+                        class="form-control"
+                        placeholder="username"
+                        value=""
+                        name="username"
+                        required
+                        pattern="[A-Za-z]{3,}"
+                      />
+                      <div id="username-error" class="invalid-feedback error">
+                        invalid username.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row mt-3">
+                    <div class="col-md-12">
+                      <label class="labels">Email</label
+                      ><input
+                      id="email"
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Your Email "
+                        value=""
+                        name="email"
+                        required
+                        pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                      />
+                      <div id="email-error" class="invalid-feedback error">
+                        invalid email
+                      </div>
+                    </div>
+
+                    <div class="col-md-12 mt-3">
+                      <label class="labels">Mobile</label>
+                      <input
+                        type="text"
+                        maxlength="10"
+                       minlength="10"
+                        class="form-control"
+                        placeholder="mobile number"
+                        value=""
+                        name="mobile"
+                        required
+                      />
+                      <div id="mobile-error" class="invalid-feedback error">
+                        invalid Mobile number.
+                      </div>
+                    </div>
+
+                    <div class="col-md-12 mt-3 date">
+                      <label class="labels">Date of birth</label>
+                      <input
+                      id="dob"
+                        type="date"
+                        max="2015-12-31"
+                        min="1900-12-31"
+                        class="form-control"
+                        value=""
+                        name="dob"
+                        required
+                      />
+                      <div id="dob-error" class="invalid-feedback error">invalid dob</div>
+                    </div>
+
+                    <div class="col-md-12 mt-3">
+                      <label class="labels">Gender</label>
+                      <select class="form-select" name="gender" id="">
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                        <option value="">other</option>
+                      </select>
+                      <div class="invalid-feedback">Select gender</div>
+                    </div>
+
+                    <div class="col-md-12 mt-3">
+                      <label class="labels">State</label>
+                      <select name="state" id="" class="form-control">
+                        <option value="">MP</option>
+                        <option value="">CG</option>
+                        <option value="">RG</option>
+                      </select>
+                      <div class="invalid-feedback">Select state.</div>
+                    </div>
+
+                    <!-- ========= -->
+                    <div class="col-md-6 mt-3">
+                      <label class="company-name">City</label>
+                      <input
+                        aria-describedby="textExample1"
+                        id="city"
+                        type="text"
+                        class="form-control"
+                        placeholder="city"
+                        value=""
+                        name="city"
+                        required
+                        pattern="[A-Za-z]{3,}"
+                      />
+                      <div
+                        id="city-error"
+                        class="invalid-feedback error"
+                      >
+                        invalid city.
+                      </div>
+                    </div>
+
+                    <!-- === -->
+                    <div class="col-md-6 mt-3">
+                      <label class="company-name">Zip</label>
+                      <input
+                        aria-describedby="textExample1"
+                        id="zip"
+                        type="text"
+                        class="form-control"
+                        placeholder="zip"
+                        value=""
+                        name="zip"
+                        required
+                       
+                      />
+                      <div
+                        id="zip-error"
+                        class="invalid-feedback error"
+                      >
+                        invalid zip.
+                      </div>
+                    </div>
+
+                    <!-- =========== -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 py-md-5 mt-1">
+                  <div class="col-md-12 mt-md-5">
+                    <label class="labels">Instagram url</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder=" Instagram url"
+                      value=""
+                      name="insta_url"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please provide a valid Company name.
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 mt-3">
+                    <label class="labels">Facebook url</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="facbook url"
+                      value=""
+                      name="fb_url"
+                    />
+                    <div class="invalid-feedback">
+                      Please provide a valid Company name.
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 mt-3">
+                    <label class="labels">Github url</label>
+                    <input
+                      name="git_url"
+                      type="text"
+                      class="form-control"
+                      placeholder="github url"
+                      value=""
+                      required
+                      pattern="https?://.+"
+                      title="Include http://"
+                    />
+                    <div class="invalid-feedback">invalid url</div>
+                  </div>
+
+                  <div class="col-md-12 mt-3">
+                    <label class="labels">Linkedin url</label
+                    ><input
+                      type="text"
+                      class="form-control"
+                      placeholder="linkedin url"
+                      value=""
+                      name="linkedin_url"
+                      required
+                    />
+                    <div class="invalid-feedback">inavild url</div>
+                  </div>
+                  <div class="col-md-12 mt-3">
+                    <label class="labels">Bio </label>
+                    <textarea
+                      maxlength="60"
+                      class="w-100"
+                      name="bio"
+                      id=""
+                      placeholder="Enter bio   maximum 60 charecter"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">
+                      Please provide a valid bio
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 mt-3 fs-6 fw-bolder">
+                    <div
+                      class="w-100 h-75 p-3 note"
+                      id=""
+                      placeholder="Enter Decription"
+                      required
+                    >
+                      Note:
+                      <p class="note-text fs-6 fw-normal">
+                        Lorem ipsum dolor, sit amet consectetur aliquam
+                        exercitationem vitae dolorem ipsa obcaecati.
+                      </p>
+                    </div>
+                    <div class="invalid-feedback">
+                      Please provide a valid Company Description.
+                    </div>
+                  </div>
+                  <div class="align-items-center mt-2 pr-5 submit">
+                    <button class="btn-primary btn p-md-1" type="submit">
+                      Save Changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+
+  <script src="script.js"></script>
+  <script src="../bootstrap-5.2.3-dist/js/bootstrap.js"></script>
+</html>

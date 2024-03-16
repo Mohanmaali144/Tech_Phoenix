@@ -1,0 +1,59 @@
+ART-Gallary>>>
+
+Ocean >>>
+
+orderDeatils :
+
+CREATE TABLE orderdetails (
+    orderId INT NOT NULL AUTO_INCREMENT,
+    orderDate DATETIME NOT NULL,
+    orderAmount DECIMAL(10,2) NOT NULL,
+    deliveryAddress TEXT NOT NULL,
+    personContactNumber VARCHAR(10),
+    paymentMode VARCHAR(30) NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    userId INT,
+    PRIMARY KEY (orderId),
+    FOREIGN KEY (userId) REFERENCES users(userId)
+);
+
+
+Cart:
+
+CREATE TABLE cart (
+    cartId INT NOT NULL AUTO_INCREMENT,
+    userId INT NOT NULL,
+    PRIMARY KEY (cartId),
+    UNIQUE KEY (userId),
+    FOREIGN KEY (userId) REFERENCES users(userId)
+);
+
+
+
+CartItems :
+
+CREATE TABLE cartitems (
+    cartItemId INT NOT NULL AUTO_INCREMENT,
+    cartId INT,
+    productId INT,
+    PRIMARY KEY (cartItemId),
+    FOREIGN KEY (cartId) REFERENCES cart(cartId),
+    FOREIGN KEY (productId) REFERENCES products(productId)
+);
+
+
+Category : 
+
+CREATE TABLE category (
+    categoryId INT NOT NULL AUTO_INCREMENT,
+    categoryName VARCHAR(50) NOT NULL,
+    PRIMARY KEY (categoryId),
+    UNIQUE KEY (categoryName)
+);
+
+
+
+
+
+
+

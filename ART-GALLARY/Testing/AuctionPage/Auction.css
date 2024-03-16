@@ -1,0 +1,66 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.test {
+  height: 100px;
+  background-color: rgb(239, 193, 138);
+}
+
+.main-container {
+  /* height: 400px; */
+  background-color: rgb(195, 165, 224);
+}
+
+.auction-container {
+  background-color: rgb(233, 134, 134);
+  /* height: 250px; */
+}
+
+.row-1 {
+  /* height: 230px; */
+  background-color: rgb(214, 226, 43);
+}
+
+.box-1 {
+  /* height: 150px; */
+  background-color: rgb(89, 161, 142);
+}
+
+.box-2 {
+  height: 150px;
+  background-color: bisque;
+}
+
+.img-box {
+  background-color: rgb(30, 210, 132);
+ max-height: 200px;
+}
+.img-0{
+height: 200px;
+}
+.img-box1 {
+  background-color: rgb(189, 155, 130);
+ 
+}
+.img-box2 {
+  background-color: rgb(30, 177, 210);
+  /* height: 150px; */
+}
+.img-box3 {
+  background-color: rgb(30, 54, 210);
+  /* height: 150px; */
+}
+.img-box4 {
+    background-color: rgb(123, 210, 30);
+   /* max-height: 100px; */
+  }
+
+ .img-1,.img-2, .img-3,.img-4{
+
+    width: 75%;
+    /* aspect-ratio: 3/2; */
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+ }

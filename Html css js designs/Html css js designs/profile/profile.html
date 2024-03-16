@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero">
+    <nav>
+        <img src="images/logo.png" alt="" class="logo">
+       <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <img src="images/user.png" alt="" class="user-pic" onclick="toggleMenu()">
+        
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="images/user.png" alt="">
+                    <h3>Mohan maali</h3>
+                </div>
+                <hr>
+
+                <a href="#" class="sub-menu-link">
+                    <img src="images/profile.png" alt="">
+                    <p>Edit profile</p>
+                    <span>&#11166;</span>
+                </a>
+
+                <a href="#" class="sub-menu-link">
+                    <img src="images/setting.png" alt="">
+                    <p>Settings & Privacy</p>
+                    <span>&#11166;</span>
+                </a>
+
+                <a href="#" class="sub-menu-link">
+                    <img src="images/help.png" alt="">
+                    <p>Help Center</p>
+                    <span>&#11166;</span>
+                </a>
+
+                <a href="#" class="sub-menu-link">
+                    <img src="images/logout.png" alt="">
+                    <p>Logout</p>
+                    <span>&#11166;</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    </div>
+    <script>
+        let sunMenu = document.getElementById("subMenu");
+
+        function toggleMenu()
+        {
+            subMenu.classList.toggle("open-menu");
+        }
+    </script>
+</body>
+</html>
